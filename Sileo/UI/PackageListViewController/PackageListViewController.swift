@@ -124,6 +124,7 @@ class PackageListViewController: SileoScrollViewController, UIGestureRecognizerD
     @objc func refreshInstalledPackages(_ sender: UIRefreshControl?) {
         sender?.beginRefreshing()
         PackageListManager.shared.reloadInstalled()
+        DownloadManager.shared.reloadData(recheckPackages: true)
         NotificationCenter.default.post(name: PackageListManager.stateChange, object: nil)
         NotificationCenter.default.post(name: PackageListManager.installChange, object: nil)
         sender?.endRefreshing()

@@ -558,38 +558,55 @@ final class DownloadManager {
         for p in self.vars.uninstalldeps.raw { NSLog("SileoLog: self.uninstalldeps: \(p.package.package)=\(p.package.version), \(p.package.local_deb ?? p.package.sourceRepo?.url)") }
     }
     
-    private func checkInstalled() {
+    private func checkInstalled()
+    {
+        var reinstallPackages = [Package]()
+        var uninstallPackages = [Package]()
+        
         let installedPackages = PackageListManager.shared.installedPackages.values
-        for package in installedPackages {
+        for package in installedPackages
+        {
             if package.eFlag == .reinstreq {
-                guard let newestPackage = PackageListManager.shared.newestPackage(identifier: package.package, repoContext: nil) else {
-                    continue
-                }
-                
-                if !checkRootHide(newestPackage) {
-                    continue
-                }
-
-                let downloadPackage = DownloadPackage(package: newestPackage)
-                
-                if !self.vars.installations.contains(downloadPackage) && !self.vars.uninstallations.contains(downloadPackage) {
-                    NSLog("SileoLog: reinstreq \(downloadPackage.package)")
-                    self.vars.installations.insert(downloadPackage)
-                    //manually resolve package here so that apt can be able to reinstall it
-                    DownloadManager.aptQueue.async {
-                        try? DependencyResolverAccelerator.shared.getDependencies(packages: [downloadPackage.package])
-                    }
-                }
+                reinstallPackages.append(package)
             } else if package.eFlag == .ok {
-                
-                let downloadPackage = DownloadPackage(package: package)
-                
-                if package.wantInfo == .deinstall || package.wantInfo == .purge || package.status == .halfconfigured || package.status == .unpacked || package.status == .halfinstalled {
-                    if !self.vars.installations.contains(downloadPackage) && !self.vars.uninstallations.contains(downloadPackage) {
-                        NSLog("SileoLog: wantInfo \(downloadPackage.package.package) = \(downloadPackage.package.wantInfo.rawValue)")
-                        self.vars.uninstallations.insert(downloadPackage)
+                if package.wantInfo == .deinstall || package.wantInfo == .purge {
+                    uninstallPackages.append(package)
+                } else if package.status == .halfconfigured || package.status == .unpacked || package.status == .halfinstalled {
+                    if package.essential == "yes" {
+                        reinstallPackages.append(package)
+                    } else {
+                        /* remove broken packages(status=unpacked) so that apt can correctly resolve the dependencies of the packages to be installed. */
+                        uninstallPackages.append(package)
                     }
                 }
+            }
+        }
+        
+        for package in reinstallPackages {
+            guard let newestPackage = PackageListManager.shared.newestPackage(identifier: package.package, repoContext: nil) else {
+                uninstallPackages.append(package)
+                continue
+            }
+
+            if !checkRootHide(newestPackage) {
+                uninstallPackages.append(package)
+                continue
+            }
+
+            let downloadPackage = DownloadPackage(package: newestPackage)
+        
+            if !self.vars.installations.contains(downloadPackage) && !self.vars.uninstallations.contains(downloadPackage) {
+                NSLog("SileoLog: wantInfo \(downloadPackage.package.package) = \(downloadPackage.package.wantInfo.rawValue)")
+                self.vars.installations.insert(downloadPackage)
+            }
+        }
+        
+        for package in uninstallPackages
+        {
+            let downloadPackage = DownloadPackage(package: package)
+            if !self.vars.installations.contains(downloadPackage) && !self.vars.uninstallations.contains(downloadPackage) {
+                NSLog("SileoLog: wantInfo \(downloadPackage.package.package) = \(downloadPackage.package.wantInfo.rawValue)")
+                self.vars.uninstallations.insert(downloadPackage)
             }
         }
     }
@@ -635,7 +652,7 @@ final class DownloadManager {
             assert(queueRunning==false)
             
             do {
-                self.checkInstalled() /* remove packages(status=unpacked) first so that apt can correctly resolve the dependencies of the packages to be installed. */
+                self.checkInstalled()
                 try self.recheckTotalOps()
             } catch {
                 removeAllItems()
