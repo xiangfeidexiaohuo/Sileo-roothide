@@ -254,3 +254,9 @@
 "Select the version of the package to install" = "Pilih versi pakej untuk dipasang";
 "You can contact the developer of this package to update it for roothide, or you can try to convert it via roothide Patcher." = "Anda boleh menghubungi pembangun pakej ini untuk mengemas kininya untuk roothide, atau anda boleh cuba menukarnya melalui roothide Patcher.";
 "please contact @roothideDev to update it" = "sila hubungi @roothideDev untuk mengemas kini";
+
+// Shortcut items
+"Shortcut_Upgrade_All" = "Kemas Kini Semua";
+"Shortcut_Refresh" = "Segarkan";
+"Shortcut_Add_Source" = "Tambah Sumber";
+"Shortcut_Packages" = "Pakej";

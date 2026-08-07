@@ -254,3 +254,9 @@
 "Select the version of the package to install" = "Valitse asennettavan paketin versio";
 "You can contact the developer of this package to update it for roothide, or you can try to convert it via roothide Patcher." = "Voit ottaa yhteyttä tämän paketin kehittäjään päivittääksesi sen roothidea varten, tai voit yrittää muuntaa sen roothide Patcherin kautta.";
 "please contact @roothideDev to update it" = "ota yhteyttä @roothideDev päivittääksesi sen";
+
+// Shortcut items
+"Shortcut_Upgrade_All" = "Päivitä kaikki";
+"Shortcut_Refresh" = "Päivitä";
+"Shortcut_Add_Source" = "Lisää lähde";
+"Shortcut_Packages" = "Paketit";

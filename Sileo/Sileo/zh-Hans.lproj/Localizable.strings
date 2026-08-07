@@ -254,3 +254,8 @@
 "please contact @roothideDev to update it" = "请联系 @roothideDev 进行更新";
 "Convert" = "转换";
 "Get Patcher" = "获取 Patcher";
+
+"Shortcut_Upgrade_All" = "全部升级";
+"Shortcut_Refresh" = "刷新";
+"Shortcut_Add_Source" = "添加软件源";
+"Shortcut_Packages" = "软件包";

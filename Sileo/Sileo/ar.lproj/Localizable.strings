@@ -254,3 +254,9 @@
 "Select the version of the package to install" = "حدد إصدار الحزمة المراد تثبيتها";
 "You can contact the developer of this package to update it for roothide, or you can try to convert it via roothide Patcher." = "يمكنك التواصل مع مطور هذه الحزمة لتحديثها لـ roothide، أو يمكنك محاولة تحويلها عبر roothide Patcher.";
 "please contact @roothideDev to update it" = "يرجى التواصل مع @roothideDev لتحديثه";
+
+// Shortcut items
+"Shortcut_Upgrade_All" = "تحديث الكل";
+"Shortcut_Refresh" = "تحديث";
+"Shortcut_Add_Source" = "إضافة مصدر";
+"Shortcut_Packages" = "الحزم";

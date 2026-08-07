@@ -254,3 +254,9 @@
 "Select the version of the package to install" = "Pick the version of the booty to install";
 "You can contact the developer of this package to update it for roothide, or you can try to convert it via roothide Patcher." = "Ye can send a raven to the maker of this booty to update it for roothide, or ye can try to plunderize it via roothide Patcher.";
 "please contact @roothideDev to update it" = "please send a raven to @roothideDev to update it";
+
+// Shortcut items
+"Shortcut_Upgrade_All" = "Plunder All Booty";
+"Shortcut_Refresh" = "Scrub the Decks";
+"Shortcut_Add_Source" = "Chart a New Isle";
+"Shortcut_Packages" = "Booty";

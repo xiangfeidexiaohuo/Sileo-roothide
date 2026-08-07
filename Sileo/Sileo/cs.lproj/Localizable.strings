@@ -254,3 +254,9 @@
 "Select the version of the package to install" = "Vyberte verzi balíčku k instalaci";
 "You can contact the developer of this package to update it for roothide, or you can try to convert it via roothide Patcher." = "Můžete kontaktovat vývojáře tohoto balíčku, aby jej aktualizoval pro roothide, nebo se můžete pokusit jej převést pomocí roothide Patcher.";
 "please contact @roothideDev to update it" = "pro aktualizaci kontaktujte @roothideDev";
+
+// Shortcut items
+"Shortcut_Upgrade_All" = "Aktualizovat vše";
+"Shortcut_Refresh" = "Obnovit";
+"Shortcut_Add_Source" = "Přidat zdroj";
+"Shortcut_Packages" = "Balíčky";

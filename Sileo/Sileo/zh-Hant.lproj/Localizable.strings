@@ -254,3 +254,9 @@
 "Select the version of the package to install" = "選擇要安裝的軟體包版本";
 "You can contact the developer of this package to update it for roothide, or you can try to convert it via roothide Patcher." = "您可以聯絡此軟體包的開發者以適配 roothide 進行更新，或嘗試透過 roothide Patcher 進行轉換。";
 "please contact @roothideDev to update it" = "請聯絡 @roothideDev 進行更新";
+
+// Shortcut items
+"Shortcut_Upgrade_All" = "全部升級";
+"Shortcut_Refresh" = "重新整理";
+"Shortcut_Add_Source" = "加入軟體源";
+"Shortcut_Packages" = "軟體包";

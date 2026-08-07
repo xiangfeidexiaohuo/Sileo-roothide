@@ -256,3 +256,9 @@ Die Quelle ist möglicherweise offline oder du hast sie falsch eingegeben. Möch
 "Select the version of the package to install" = "Wählen Sie die Version des zu installierenden Pakets aus";
 "You can contact the developer of this package to update it for roothide, or you can try to convert it via roothide Patcher." = "Sie können den Entwickler dieses Pakets kontaktieren, um es für roothide zu aktualisieren, oder Sie können versuchen, es über roothide Patcher zu konvertieren.";
 "please contact @roothideDev to update it" = "bitte kontaktieren Sie @roothideDev, um es zu aktualisieren";
+
+// Shortcut items
+"Shortcut_Upgrade_All" = "Alle aktualisieren";
+"Shortcut_Refresh" = "Aktualisieren";
+"Shortcut_Add_Source" = "Quelle hinzufügen";
+"Shortcut_Packages" = "Pakete";

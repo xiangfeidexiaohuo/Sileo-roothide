@@ -59,6 +59,27 @@ class SileoAppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDe
     
     func applicationDidBecomeActive(_ application: UIApplication) {
         NSLog("SileoLog: applicationDidBecomeActive")
+        // Refresh localized shortcut items every time the app becomes active
+        // to ensure iOS picks up the correct localization (iOS caches shortcut items)
+        let bundleId = Bundle.main.bundleIdentifier ?? ""
+        UIApplication.shared.shortcutItems = [
+            UIApplicationShortcutItem(type: "\(bundleId).UpgradeAll",
+                                      localizedTitle: String(localizationKey: "Shortcut_Upgrade_All"),
+                                      localizedSubtitle: nil,
+                                      icon: UIApplicationShortcutIcon(templateImageName: "UpgradeAll")),
+            UIApplicationShortcutItem(type: "\(bundleId).Refresh",
+                                      localizedTitle: String(localizationKey: "Shortcut_Refresh"),
+                                      localizedSubtitle: nil,
+                                      icon: UIApplicationShortcutIcon(templateImageName: "Refresh")),
+            UIApplicationShortcutItem(type: "\(bundleId).AddSource",
+                                      localizedTitle: String(localizationKey: "Shortcut_Add_Source"),
+                                      localizedSubtitle: nil,
+                                      icon: UIApplicationShortcutIcon(type: .add)),
+            UIApplicationShortcutItem(type: "\(bundleId).Packages",
+                                      localizedTitle: String(localizationKey: "Shortcut_Packages"),
+                                      localizedSubtitle: nil,
+                                      icon: UIApplicationShortcutIcon(templateImageName: "Packages")),
+        ]
     }
     
     func applicationDidFinishLaunching(_ application: UIApplication) {
@@ -275,7 +296,7 @@ class SileoAppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDe
         UIToolbar.appearance().tintColor = tintColor
         UISearchBar.appearance().tintColor = tintColor
         UITabBar.appearance().tintColor = tintColor
-        
+
         UICollectionView.appearance().tintColor = tintColor
         UITableView.appearance().tintColor = tintColor
         DepictionBaseView.appearance().tintColor = tintColor

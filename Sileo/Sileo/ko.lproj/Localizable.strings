@@ -254,3 +254,9 @@
 "Select the version of the package to install" = "설치할 패키지 버전 선택";
 "You can contact the developer of this package to update it for roothide, or you can try to convert it via roothide Patcher." = "이 패키지의 개발자에게 roothide 업데이트를 요청하거나, roothide Patcher를 통해 변환해 볼 수 있습니다.";
 "please contact @roothideDev to update it" = "업데이트하려면 @roothideDev에게 문의하세요";
+
+// Shortcut items
+"Shortcut_Upgrade_All" = "모두 업그레이드";
+"Shortcut_Refresh" = "새로고침";
+"Shortcut_Add_Source" = "소스 추가";
+"Shortcut_Packages" = "패키지";

@@ -254,3 +254,9 @@
 "Select the version of the package to install" = "Chọn phiên bản gói để cài đặt";
 "You can contact the developer of this package to update it for roothide, or you can try to convert it via roothide Patcher." = "Bạn có thể liên hệ với nhà phát triển của gói này để cập nhật cho roothide, hoặc bạn có thể thử chuyển đổi qua roothide Patcher.";
 "please contact @roothideDev to update it" = "vui lòng liên hệ @roothideDev để cập nhật";
+
+// Shortcut items
+"Shortcut_Upgrade_All" = "Cập nhật tất cả";
+"Shortcut_Refresh" = "Làm mới";
+"Shortcut_Add_Source" = "Thêm nguồn";
+"Shortcut_Packages" = "Gói";

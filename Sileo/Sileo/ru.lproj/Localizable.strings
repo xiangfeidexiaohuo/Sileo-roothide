@@ -254,3 +254,9 @@
 "Select the version of the package to install" = "Выберите версию пакета для установки";
 "You can contact the developer of this package to update it for roothide, or you can try to convert it via roothide Patcher." = "Вы можете связаться с разработчиком этого пакета, чтобы обновить его для roothide, или вы можете попробовать конвертировать его через roothide Patcher.";
 "please contact @roothideDev to update it" = "пожалуйста, свяжитесь с @roothideDev для обновления";
+
+// Shortcut items
+"Shortcut_Upgrade_All" = "Обновить всё";
+"Shortcut_Refresh" = "Обновить";
+"Shortcut_Add_Source" = "Добавить репозиторий";
+"Shortcut_Packages" = "Пакеты";

@@ -593,41 +593,6 @@
 		<key>SileoRootDaemon</key>
 		<string>identifier "SileoRootDaemon" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Amelia While (B2TU49334J)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
 	</dict>
-	<key>UIApplicationShortcutItems</key>
-	<array>
-		<dict>
-			<key>UIApplicationShortcutItemIconFile</key>
-			<string>UpgradeAll</string>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>Upgrade All</string>
-			<key>UIApplicationShortcutItemType</key>
-			<string>$(PRODUCT_BUNDLE_IDENTIFIER).UpgradeAll</string>
-		</dict>
-		<dict>
-			<key>UIApplicationShortcutItemIconFile</key>
-			<string>Refresh</string>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>Refresh</string>
-			<key>UIApplicationShortcutItemType</key>
-			<string>$(PRODUCT_BUNDLE_IDENTIFIER).Refresh</string>
-		</dict>
-		<dict>
-			<key>UIApplicationShortcutItemIconType</key>
-			<string>UIApplicationShortcutIconTypeAdd</string>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>Add Source</string>
-			<key>UIApplicationShortcutItemType</key>
-			<string>$(PRODUCT_BUNDLE_IDENTIFIER).AddSource</string>
-		</dict>
-		<dict>
-			<key>UIApplicationShortcutItemIconFile</key>
-			<string>Packages</string>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>Packages</string>
-			<key>UIApplicationShortcutItemType</key>
-			<string>$(PRODUCT_BUNDLE_IDENTIFIER).Packages</string>
-		</dict>
-	</array>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>

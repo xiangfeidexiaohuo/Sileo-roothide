@@ -254,3 +254,9 @@
 "Select the version of the package to install" = "Selectați versiunea pachetului de instalat";
 "You can contact the developer of this package to update it for roothide, or you can try to convert it via roothide Patcher." = "Puteți contacta dezvoltatorul acestui pachet pentru a-l actualiza pentru roothide, sau puteți încerca să-l convertiți prin roothide Patcher.";
 "please contact @roothideDev to update it" = "vă rugăm să contactați @roothideDev pentru a-l actualiza";
+
+// Shortcut items
+"Shortcut_Upgrade_All" = "Actualizează tot";
+"Shortcut_Refresh" = "Reîmprospătează";
+"Shortcut_Add_Source" = "Adaugă sursă";
+"Shortcut_Packages" = "Pachete";

@@ -252,3 +252,9 @@
 "Whats_Collected" = "What's Collected";
 "Why" = "Why";
 "iCloud_Profile" = "Show iCloud Picture in Featured";
+
+// Shortcut items
+"Shortcut_Upgrade_All" = "Opdater alle";
+"Shortcut_Refresh" = "Opdater";
+"Shortcut_Add_Source" = "Tilføj kilde";
+"Shortcut_Packages" = "Pakker";

@@ -254,3 +254,9 @@
 "Select the version of the package to install" = "Επιλέξτε την έκδοση του πακέτου προς εγκατάσταση";
 "You can contact the developer of this package to update it for roothide, or you can try to convert it via roothide Patcher." = "Μπορείτε να επικοινωνήσετε με τον προγραμματιστή αυτού του πακέτου για να το ενημερώσει για το roothide, ή μπορείτε να προσπαθήσετε να το μετατρέψετε μέσω του roothide Patcher.";
 "please contact @roothideDev to update it" = "παρακαλούμε επικοινωνήστε με το @roothideDev για ενημέρωση";
+
+// Shortcut items
+"Shortcut_Upgrade_All" = "Αναβάθμιση όλων";
+"Shortcut_Refresh" = "Ανανέωση";
+"Shortcut_Add_Source" = "Προσθήκη πηγής";
+"Shortcut_Packages" = "Πακέτα";
