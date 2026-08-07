@@ -30,10 +30,15 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         delegate = self
         TabBarController.singleton = self
-        
+
+        if #available(iOS 26.0, *) {
+            // iOS 26: prevent the tab bar from minimizing on scroll
+            self.tabBarMinimizeBehavior = .never
+        }
+
         downloadsController = UINavigationController(rootViewController: DownloadManager.shared.viewController)
         downloadsController?.isNavigationBarHidden = true
         downloadsController?.popupItem.title = ""
@@ -334,7 +339,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     override func viewDidLayoutSubviews() {
         NSLog("SileoLog: TabBarController.viewDidLayoutSubviews")
         super.viewDidLayoutSubviews()
-        
+
         self.tabBar.itemPositioning = .centered
         if UIDevice.current.userInterfaceIdiom == .pad {
             self.updatePopup(animated: false)
