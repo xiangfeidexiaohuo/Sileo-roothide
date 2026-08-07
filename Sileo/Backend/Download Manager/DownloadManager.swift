@@ -801,9 +801,11 @@ final class DownloadManager {
             NSLog("SileoLog: destURL=\(destURL.path)")
             try! FileManager.default.moveItem(at: fileURL, to: destURL)
         
-            if IsAppAvailable("com.roothide.patcher") {
-                if ShareFileToApp("com.roothide.patcher", destFileName) {
-                    return
+            for patcherId in ["com.roothide.patcher", "com.dao.patcher"] {
+                if IsAppAvailable(patcherId) {
+                    if ShareFileToApp(patcherId, destFileName) {
+                        return
+                    }
                 }
             }
     
@@ -945,7 +947,7 @@ final class DownloadManager {
                     
                     let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
                     
-                    let installedPatcher = PackageListManager.shared.installedPackage(identifier: "com.roothide.patcher") != nil
+                    let installedPatcher = ["com.roothide.patcher", "com.dao.patcher"].contains { PackageListManager.shared.installedPackage(identifier: $0) != nil }
                     
                     let patchAction = UIAlertAction(title: String(localizationKey: installedPatcher ? "Convert" : "Get Patcher"), style: .destructive) { _ in
                         alert.dismiss(animated: true, completion: {
